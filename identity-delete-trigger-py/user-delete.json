@@ -1,0 +1,50 @@
+{
+  "protoPayload": {
+    "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+    "status": {},
+    "authenticationInfo": {
+      "principalEmail": "ext_khendry@example.com",
+      "principalSubject": "user:ext_khendry@example.com"
+    },
+    "requestMetadata": {
+      "callerIp": "81.187.180.141",
+      "callerSuppliedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36,gzip(gfe),gzip(gfe)",
+      "requestAttributes": {
+        "time": "2024-06-28T10:00:41.738648Z",
+        "auth": {}
+      },
+      "destinationAttributes": {}
+    },
+    "serviceName": "identitytoolkit.googleapis.com",
+    "methodName": "google.cloud.identitytoolkit.v1.AccountManagementService.DeleteAccount",
+    "authorizationInfo": [
+      {
+        "permission": "firebaseauth.users.delete",
+        "granted": true,
+        "resourceAttributes": {},
+        "permissionType": "DATA_WRITE"
+      }
+    ],
+    "resourceName": "projects/ciam-dev",
+    "request": {
+      "targetProjectId": "ciam-dev",
+      "localId": "LtMIs83hqpTNoSpQVq9ZJ08IWxv1",
+      "@type": "type.googleapis.com/google.cloud.identitytoolkit.v1.DeleteAccountRequest"
+    },
+    "response": {
+      "@type": "type.googleapis.com/google.cloud.identitytoolkit.v1.DeleteAccountResponse",
+      "kind": "identitytoolkit#DeleteAccountResponse"
+    }
+  },
+  "insertId": "-8lhsyqd46dq",
+  "resource": {
+    "type": "identitytoolkit_project",
+    "labels": {
+      "project_id": "ciam-dev"
+    }
+  },
+  "timestamp": "2024-06-28T10:00:41.432497Z",
+  "severity": "INFO",
+  "logName": "projects/ciam-dev/logs/cloudaudit.googleapis.com%2Fdata_access",
+  "receiveTimestamp": "2024-06-28T10:00:42.347394747Z"
+}
