@@ -25,11 +25,16 @@ def create_cloud_event(payload):
 
 
 class FirestoreUserDeleteTests(unittest.TestCase):
-    @patch("google.cloud.logging.Client")
-    @patch("google.cloud.firestore.Client")
+    @patch("google.cloud.logging.Client", autospec=True)
+    @patch("google.cloud.firestore.Client", autospec=True)
+    @patch("google.auth.default", return_value=(MagicMock(), "test-project"))
     @patch("main.logging")
     def test_firestoreUserDelete_success(
-        self, mock_logging, mock_firestore_client, mock_logging_client
+        self,
+        mock_logging,
+        mock_auth_default,
+        mock_firestore_client,
+        mock_logging_client,
     ):
         # read file user-delete.json
         with open(os.path.join(current_dir, "user-delete.json")) as f:
