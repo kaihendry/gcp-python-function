@@ -11,7 +11,7 @@ logging_client.setup_logging()
 logger = logging_client.logger("identity-delete-trigger")
 
 try:
-    db = firestore.Client(project=os.environ.get("PROJECTID"))
+    db = firestore.Client()
 except Exception as e:
     logging.error("Can't connect to Firestore Client: {}".format(str(e)))
 
